@@ -1,15 +1,13 @@
 About hatch-nodejs-version
 ==========================
 
-Home: https://pypi.org/project/hatch-nodejs-version
+Home: https://github.com/agoose77/hatch-nodejs-version
 
 Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hatch-nodejs-version-feedstock/blob/main/LICENSE.txt)
 
 Summary: Hatch plugin for versioning from a package.json file
-
-Development: https://github.com/agoose77/hatch-nodejs-version
 
 Current build status
 ====================
@@ -147,4 +145,5 @@ Feedstock Maintainers
 
 * [@agoose77](https://github.com/agoose77/)
 * [@bollwyvl](https://github.com/bollwyvl/)
+* [@thewchan](https://github.com/thewchan/)
 
