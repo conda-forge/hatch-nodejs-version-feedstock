@@ -1,12 +1,11 @@
-{% set name = "hatch-nodejs-version" %}
 {% set version = "0.3.1" %}
 
 package:
-  name: {{ name|lower }}
+  name: hatch-nodejs-version
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hatch_nodejs_version-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/h/hatch-nodejs-version/hatch_nodejs_version-{{ version }}.tar.gz
   sha256: 0e55fd713d92c5c1ccfee778efecaa780fd8bcd276d4ca7aff9f6791f6f76d9c
 
 build:
@@ -27,12 +26,15 @@ test:
   source_files:
     - tests
   requires:
+    - m2-grep  # [win]
     - pip
-    - pytest
+    - pytest >=7.0.1
   imports:
     - hatch_nodejs_version
   commands:
     - pip check
+    - pip list
+    - pip list | grep -iE 'hatch-nodejs-version\s*{{ version.replace('.', '\.') }}'
     - pytest -vvv --capture=tee-sys tests
 
 about:
