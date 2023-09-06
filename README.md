@@ -1,11 +1,11 @@
-About hatch-nodejs-version
-==========================
+About hatch-nodejs-version-feedstock
+====================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hatch-nodejs-version-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/agoose77/hatch-nodejs-version
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hatch-nodejs-version-feedstock/blob/main/LICENSE.txt)
 
 Summary: Hatch plugin for versioning from a package.json file
 
