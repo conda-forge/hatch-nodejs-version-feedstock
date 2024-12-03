@@ -5,22 +5,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/h/hatch-nodejs-version/hatch_nodejs_version-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/h/hatch-nodejs-version/hatch_nodejs_version-{{ version }}.tar.gz
   sha256: 8a7828d817b71e50bbbbb01c9bfc0b329657b7900c56846489b9c958de15b54c
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - hatchling
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - hatchling >=0.21.0
-    - python >=3.7
+    - python >={{ python_min }}
 
 test:
   source_files:
@@ -30,6 +30,7 @@ test:
     - pip
     - pytest >=7.0.1
     - pytest-cov
+    - python {{ python_min }}
   imports:
     - hatch_nodejs_version
   commands:
